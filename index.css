@@ -38,7 +38,7 @@ ul li { list-style: outside none none;}
 .banner:hover #prev_bnt {display: block;}
 #scorllBar { margin: 0 auto 0 -70px; position: absolute; bottom: 20px; left: 50%; z-index: 2;}
 #scorllBar a { display: block; width: 28px; height: 28px; cursor: pointer; float:left; background: url(img/dot.png) no-repeat scroll 0 0; z-index: 2;}
-#scorllBar a.active { background-position: -27px 0;}
+#scorllBar a.active { background-position: -27px 0px; }
 #scorllBar a span { display: none; z-index: 2;}
 #hjs_imgCont { width:100%; height: 396px; overflow: hidden; position: relative;}
 #list { width:800%; height: 396px;position: relative; float: left; height: 396px; z-index: 1;}
