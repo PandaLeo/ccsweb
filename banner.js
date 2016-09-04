@@ -8,7 +8,7 @@ window.onload = function () {
     var oNext_bnt = document.getElementById('next_bnt');
     var oPrev_bnt = document.getElementById('prev_bnt');
     var index = 1;
-    var len = 6;
+    var animated = false;
     var interval = 3000;
     var timer;
 
@@ -20,8 +20,9 @@ window.onload = function () {
             index += 1;
         }
         showButton();
-        animate(-100);
-
+        if (!animated){
+            animate(-100);
+        }
     };
     oPrev_bnt.onclick = function () {
         if (index == 1) {
@@ -31,9 +32,12 @@ window.onload = function () {
             index -= 1;
         }
         showButton();
-        animate(100);
+        if (!animated){
+            animate(100);
+        }
     };
     function animate(offset) {
+        animated = true;
         var left = parseInt(oList.style.left) + offset;
         var time = 300;
         var interval = 10;
@@ -45,6 +49,7 @@ window.onload = function () {
                 setTimeout(go,interval);
             }
             else {
+                animated = false;
                 oList.style.left = left + '%';
                 if (left < -600) {
                     oList.style.left = -100 + '%';
@@ -65,6 +70,14 @@ window.onload = function () {
             }
         oScorllBar[index - 1].className = 'active';
     }
+    function play() {
+        timer = setInterval(function () {
+            oNext_bnt.onclick();
+        },interval);
+    }
+    function stop() {
+        clearInterval(timer);
+    }
 
     for (var i = 0; i < oScorllBar.length; i++) {
         oScorllBar[i].index=i+1;
@@ -73,8 +86,13 @@ window.onload = function () {
             var offset = -100 * (myIndex-index);
             index = myIndex;
             showButton();
-            animate(offset);
+            if (!animated){
+                animate(offset);
+            }
         }
     }
+    oHjs_imgCont.onmouseover = stop;
+    oHjs_imgCont.onmouseout = play;
+    play();
 }
 
