@@ -11,7 +11,7 @@ window.onload = function () {
     var animated = false;
     var interval = 3000;
     var timer;
-
+  
     oNext_bnt.onclick = function () {
         if (index == 6) {
             index = 1;
