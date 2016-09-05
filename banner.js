@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2016/9/3 0003.
  */
-window.onload = function () {
+function banner(){
     var oList = document.getElementById('list');
     var oHjs_imgCont = document.getElementById('hjs_imgCont');
     var oScorllBar = document.getElementById('scorllBar').getElementsByTagName('a');
@@ -95,4 +95,3 @@ window.onload = function () {
     oHjs_imgCont.onmouseout = play;
     play();
 }
-

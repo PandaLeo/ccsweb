@@ -53,11 +53,10 @@ ul li { list-style: outside none none;}
 .title_bj1 span { display: inline-block; background: url(img/news12.jpg) no-repeat scroll 20px center; padding-left: 43px;}
 .list_xx { width: 315px; height: 85px; margin: 20px auto 0; overflow: hidden;}
 .box { width: 315px; height: 85px; overflow: hidden;}
-.t_news { height: 85px; overflow: hidden; position: relative;}
-.news_li ,.swap { width: 315px; line-height: 85px; display: inline-block; position: absolute; left: 0; top: 0;}
-.news_li li ,.swap li { height: 85px; overflow: hidden;}
-.news_li a ,.swap a { color: rgb(255,255,255);}
-.swap { top: 90px;}
+.t_news { height: 340px; overflow: hidden; position: relative;}
+#swap { width: 315px; height: 340px; position: absolute;}
+#swap li { height: 85px; overflow: hidden; position: relative;display: block;}
+#swap a { color: rgb(255,255,255);}
 .pic_set12 { width: 107px; height: 82px; padding: 5px; background: url(img/picbj12.jpg) no-repeat scroll 0 0;}
 .con_set12 { width: 190px; color: rgb(153,153,153); font-family: "微软雅黑"; line-height: 22px;font-weight: bold; padding-top: 5px;}
 .con_set12 a { display: block; color: rgb(254,137,21); line-height: 22px;}
