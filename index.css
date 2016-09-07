@@ -24,24 +24,28 @@ ul li { list-style: outside none none;}
 .search_text { width: 185px; height: 18px; background: rgb(255,255,255) none repeat scroll 0 0; border: 1px solid rgb(221,221,221); float: left;}
 .search { float: left; width: 21px; height: 20px; cursor: pointer; border: none;background: transparent url(img/search.gif) no-repeat scroll 0 0;}
 .nav_box { width: 100%; height: 35px; background: rgb(15,88,203) none repeat scroll 0 0; position: relative; min-width: 995px;}
-.tybj { width: 100%; height: 4px; background: url(img/tybj.png) repeat-x scroll left top; position: absolute; left: 0; bottom: -4px; z-index: 1000; min-width: 995px;}
+.tybj { width: 100%; height: 4px; background: url(img/tybj.png) repeat-x scroll left top; position: absolute; left: 0; bottom: -4px; z-index: 3; min-width: 995px;}
 .nav { width: 1000px; height: 35px; margin: 0 auto;}
 #menu { padding: 0 32px;}
-#menu li { width: 152px; line-height: 35px; color: rgb(255,255,255); float: left; text-align: center; font-size: 14px; font-family: "微软雅黑"; font-weight: 100; background: url(img/line.jpg) no-repeat scroll right center; position: relative;}
-#menu li a { display: block; color: rgb(255,255,255); width: 152px; height: 35px;}
-#menu li a.hover { border-bottom: 3px solid rgb(38,140,248); height: 32px;}
-#menu li a.hover1 {background: url(img/hover.gif) no-repeat scroll left top;}
+#menu li { display:block; width: 152px; line-height: 35px; color: rgb(255,255,255); float: left; text-align: center; font-size: 14px; font-family: "微软雅黑"; font-weight: 100; background: url(img/line.jpg) no-repeat scroll right top; }
+#menu li a { position:relative; display: block; color: rgb(255,255,255); background: rgb(15,88,203) none repeat scroll 0 0;  width: 152px; height: 35px; z-index: 2;}
+#menu li ul { color: rgb(255,255,255); background: rgb(15,88,203) none repeat scroll 0 0;  width: 152px; z-index: 2; display: none; position: absolute;}
+#menu li ul a { position:relative; color: rgb(255,255,255); background: rgb(15,88,203) none repeat scroll 0 0;  width: 152px; z-index: 2; }
+#menu li a.hover { border-bottom: 3px solid rgb(38,140,248); height: 32px; background: rgb(15,88,203) none repeat scroll 0 0;}
+#menu li a.hovered { border-bottom: 3px solid rgb(38,140,248); height: 32px; background: rgb(15,88,203) none repeat scroll 0 0;}
+#menu li a.hover1 { height: 32px; background: rgb(15,88,203) none repeat scroll 0 0;}
+.channel,.ula,.lai{}
 .banner { width: 100%; height: 396px; position: relative; min-width: 995px;}
 #prev_bnt { left: 0; bottom: 135px; width: 26px;height: 123px; background: url(img/prevBtn.png) no-repeat scroll 0 0; position: absolute; z-index: 2; display: none;}
 #next_bnt { right: 0; bottom: 135px; width: 26px;height: 123px; background: url(img/nextBtn.png) no-repeat scroll 0 0; position: absolute; z-index: 2; display: none;}
 .banner:hover #next_bnt {display: block;}
 .banner:hover #prev_bnt {display: block;}
-#scorllBar { margin: 0 auto 0 -70px; position: absolute; bottom: 20px; left: 50%; z-index: 2;}
+#scorllBar { margin: 0 auto 0 -70px; position: relative; bottom: 20px; left: 50%; z-index: 2;}
 #scorllBar a { display: block; width: 28px; height: 28px; cursor: pointer; float:left; background: url(img/dot.png) no-repeat scroll 0 0; z-index: 2;}
-#scorllBar a.active { background-position: -27px 0px; }
+#scorllBar a.active { background-position: -27px 0; }
 #scorllBar a span { display: none; z-index: 2;}
 #hjs_imgCont { width:100%; height: 396px; overflow: hidden; position: relative;}
-#list { width:800%; height: 396px;position: relative; float: left; height: 396px; z-index: 1;}
+#list { width:800%; height: 396px;position: relative; float: left; z-index: 1;}
 #list img { width:12.5%; height: 396px; float: left;}
 .banshadow { width: 100%; height: 8px; margin: 0 auto;background: url(img/tbj12.jpg) no-repeat scroll center top; min-width: 995px;}
 .content1 { width: 1000px; height: auto; margin: 0 auto 40px;}
