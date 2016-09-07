@@ -21,11 +21,11 @@ function news() {
             else {
                 animated = false;
                 oSwap.style.top = top + 'px';
-                if (top < -255){
-                    oSwap.style.top = 85 + 'px';
+                if (top < -170){
+                    oSwap.style.top = -85 + 'px';
                 }
-                if (top >0){
-                    oSwap.style.top = -255 + 'px';
+                if (top >-85){
+                    oSwap.style.top = -170 + 'px';
                 }
             }
         }

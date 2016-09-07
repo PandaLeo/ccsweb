@@ -13,27 +13,27 @@ function banner(){
     var timer;
   
     oNext_bnt.onclick = function () {
-        if (index == 6) {
-            index = 1;
-        }
-        else {
-            index += 1;
-        }
-        showButton();
         if (!animated){
             animate(-100);
+            if (index == 6) {
+                index = 1;
+            }
+            else {
+                index += 1;
+            }
+            showButton();
         }
     };
     oPrev_bnt.onclick = function () {
-        if (index == 1) {
-            index = 6;
-        }
-        else {
-            index -= 1;
-        }
-        showButton();
         if (!animated){
             animate(100);
+            if (index == 1) {
+                index = 6;
+            }
+            else {
+                index -= 1;
+            }
+            showButton();
         }
     };
     function animate(offset) {
@@ -58,7 +58,6 @@ function banner(){
                     oList.style.left = -600 + '%';
                 }
             }
-
         }
         go();
     }

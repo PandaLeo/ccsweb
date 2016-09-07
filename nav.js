@@ -7,33 +7,42 @@ function nav() {
     var oLia = document.getElementsByClassName('lia');
     var len= oMenu.length;
     var timer = null;
+
     function menu() {
-        for (var i= 0; i < len; oMenu[i].id = i,oLia[i].id=i, i++) {
+        for (var i= 0; i < len; oMenu[i].id = i, oLia[i].id=i,i++) {
             oMenu[i].onmouseover = function () {
+                if (!(this.className == 'channel hovered')) {
+                    this.className = 'channel hover';
+                }
+                for (var i = 0; i < len; i++){
+                        oUla[i].style.display = 'none';
+                    }
+            };
+
+
+            oMenu[i].onmouseout = function () {
+                if (!(this.className == 'channel hovered')) {
+                    this.className = 'channel hover1';
+                }
+            };
+
+            oLia[i].onmouseover = function () {
                 var that = this;
                 if(timer){
                     clearTimeout(timer);
-                }
-                if (!(that.className == 'channel hovered')) {
-                    that.className = 'channel hover';
                 }
                 timer=setTimeout(function () {
                     oUla[that.id].style.display = 'block';
                 },500);
             };
 
-            oMenu[i].onmouseout = function () {
-                var that = this;
-                if (!(that.className == 'channel hovered')) {
-                    that.className = 'channel hover1';
-                }
-            };
-
             oLia[i].onmouseout = function () {
                 var that = this;
                 if(timer) {
                     clearTimeout(timer);
-                    oUla[that.id].style.display = 'none';
+                    timer=setTimeout(function () {
+                        oUla[that.id].style.display = 'none';
+                    },500);
                 }
             };
 

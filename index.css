@@ -29,8 +29,8 @@ ul li { list-style: outside none none;}
 #menu { padding: 0 32px;}
 #menu li { display:block; width: 152px; line-height: 35px; color: rgb(255,255,255); float: left; text-align: center; font-size: 14px; font-family: "微软雅黑"; font-weight: 100; background: url(img/line.jpg) no-repeat scroll right top; }
 #menu li a { position:relative; display: block; color: rgb(255,255,255); background: rgb(15,88,203) none repeat scroll 0 0;  width: 152px; height: 35px; z-index: 2;}
-#menu li ul { color: rgb(255,255,255); background: rgb(15,88,203) none repeat scroll 0 0;  width: 152px; z-index: 2; display: none; position: absolute;}
-#menu li ul a { position:relative; color: rgb(255,255,255); background: rgb(15,88,203) none repeat scroll 0 0;  width: 152px; z-index: 2; }
+#menu li ul { color: rgb(255,255,255); background: rgba(15,88,203,0.5) none repeat scroll 0 0;  width: 152px; z-index: 2; display: none; position: absolute;}
+#menu li ul a { position:relative; color: rgb(255,255,255); background: rgba(15,88,203,0.5) none repeat scroll 0 0;  width: 152px; z-index: 2;}
 #menu li a.hover { border-bottom: 3px solid rgb(38,140,248); height: 32px; background: rgb(15,88,203) none repeat scroll 0 0;}
 #menu li a.hovered { border-bottom: 3px solid rgb(38,140,248); height: 32px; background: rgb(15,88,203) none repeat scroll 0 0;}
 #menu li a.hover1 { height: 32px; background: rgb(15,88,203) none repeat scroll 0 0;}
